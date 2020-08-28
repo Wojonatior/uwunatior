@@ -33,7 +33,7 @@ client.on('message', (msg) => {
 });
 
 client.on('guildMemberAdd', (member) => {
-  if (member.username.toLowerCase() === 'malcomwest') {
+  if (member.user.username.toLowerCase() === 'malcomwest') {
     const role = msg.guild.roles.cache.find(
       (role) => role.name === 'uwu criminal',
     );

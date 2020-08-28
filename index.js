@@ -32,4 +32,16 @@ client.on('message', (msg) => {
   }
 });
 
+client.on('guildMemberAdd', (member) => {
+  if (member.username.toLowerCase() === 'malcomwest') {
+    const role = msg.guild.roles.cache.find(
+      (role) => role.name === 'uwu criminal',
+    );
+    if (role) {
+      msg.member.roles.add(role);
+    }
+    member.roles.add(role);
+  }
+});
+
 client.login(process.env.DISCORD_BOT_TOKEN);
